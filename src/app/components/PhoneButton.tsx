@@ -5,9 +5,10 @@ export default function PhoneButton({ className = '' }: { className?: string }) 
   return (
     <a 
       href={phoneLink}
-      className={`block w-full sm:inline-block sm:w-auto bg-gray-900 text-white font-semibold text-center text-lg sm:text-xl px-6 py-4 sm:px-10 sm:py-5 rounded-sm hover:bg-gray-800 active:bg-gray-950 transition-colors ${className}`}
+      className={`cta-primary ${className}`}
     >
-      {phoneNumber}
+      <span className="block text-sm font-normal opacity-90 mb-0.5">Calgary Emergency Line</span>
+      <span className="block text-xl sm:text-2xl font-bold tracking-tight">{phoneNumber}</span>
     </a>
   )
 }

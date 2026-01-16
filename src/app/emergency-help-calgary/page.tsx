@@ -35,15 +35,19 @@ const emergencyCategories = [
 export default function EmergencyHelpCalgary() {
   return (
     <main className="min-h-screen bg-white pb-24 sm:pb-0">
-      {/* Hero Section */}
       <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-2xl mx-auto px-4 py-6 sm:py-12">
-          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2 sm:mb-4 leading-tight">
+        <div className="max-w-2xl mx-auto px-4 py-5 sm:py-10">
+          <div className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full mb-3">
+            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+            Available Now
+          </div>
+          
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 leading-tight">
             Emergency Help in Calgary
           </h1>
           
           <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-            Local Calgary contractors. Available now for home emergencies.
+            Local contractors. Available now. We dispatch across Calgary.
           </p>
           
           <div className="hidden sm:block">
@@ -52,35 +56,36 @@ export default function EmergencyHelpCalgary() {
         </div>
       </div>
 
-      {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 p-3 bg-white border-t border-gray-200 sm:hidden z-50">
+      <div className="cta-sticky">
         <PhoneButton />
       </div>
 
       <div className="max-w-2xl mx-auto px-4">
-        {/* Emergency Categories */}
-        <section className="py-8 sm:py-12">
-          <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-5 sm:mb-6">
+        <section className="py-6 sm:py-10">
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-5">
             Select Your Emergency
           </h2>
 
-          <div className="space-y-3 sm:space-y-4">
+          <div className="space-y-3">
             {emergencyCategories.map((category) => (
               <div 
                 key={category.title}
-                className="border border-gray-200 rounded p-4 sm:p-6"
+                className="border border-gray-200 rounded p-4 sm:p-5 bg-white"
               >
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                   {category.title}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-1.5">
                   {category.items.map((item) => (
                     <li key={item.href}>
                       <Link 
                         href={item.href}
-                        className="text-gray-900 underline underline-offset-2 hover:text-gray-600 py-1 inline-block"
+                        className="text-gray-900 hover:text-emerald-700 py-1 inline-flex items-center gap-1 transition-colors"
                       >
-                        {item.label}
+                        <span className="underline underline-offset-2">{item.label}</span>
+                        <svg className="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </Link>
                     </li>
                   ))}
@@ -90,15 +95,13 @@ export default function EmergencyHelpCalgary() {
           </div>
         </section>
 
-        {/* Coverage Section */}
-        <section className="py-6 sm:py-8 border-t border-gray-200">
-          <p className="text-gray-600 text-sm sm:text-base">
-            From Bowness to Bonavista. We dispatch across Calgary.
+        <section className="py-4 sm:py-6 border-t border-gray-200">
+          <p className="text-sm text-gray-500">
+            Serving all Calgary communities. From Bowness to Bonavista.
           </p>
         </section>
 
-        {/* Final CTA - Desktop only */}
-        <div className="py-8 sm:py-10 border-t border-gray-200 hidden sm:block">
+        <div className="py-6 sm:py-8 border-t border-gray-200 hidden sm:block">
           <PhoneButton />
         </div>
       </div>

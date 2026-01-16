@@ -38,9 +38,37 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Before Launch
 
-Replace placeholder phone number in `src/app/components/PhoneButton.tsx`:
+Replace placeholder phone number in TWO locations:
 
+1. `src/app/components/PhoneButton.tsx`:
 ```tsx
 const phoneNumber = '(403) XXX-XXXX'  // Display number
 const phoneLink = 'tel:+14035551234'   // Actual tel: link
 ```
+
+2. `src/app/layout.tsx` (header mobile link):
+```tsx
+<a href="tel:+14035551234" ...>(403) XXX-XXXX</a>
+```
+
+## Business Hours Note
+
+The "Available Now" badge appears on all pages. If running ads only during business hours, this is accurate. If you need to indicate limited hours, update the badge text in each page file:
+
+```tsx
+// Change from:
+Available Now
+
+// To something like:
+Calgary Emergency Line
+```
+
+## CRO Features
+
+- Emerald accent color (trust/go signal)
+- Sticky mobile CTA (always visible)
+- "Available Now" badge (answers availability instantly)
+- Two-line phone button (label + number)
+- Header with business identity
+- Footer for legitimacy
+- Minimal, fast-loading pages
