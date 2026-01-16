@@ -4,16 +4,24 @@ import PhoneButton from '../components/PhoneButton'
 
 export const metadata: Metadata = {
   title: 'Emergency Help in Calgary - 24/7 Home Emergency Services',
-  description: 'Connect with emergency plumbing, heating, and electrical services in Calgary. Available 24/7 for basement flooding, no heat, burst pipes, and more.',
+  description: 'Connect with emergency plumbing, heating, electrical, and restoration services in Calgary. Available 24/7 for flooding, fire damage, no heat, and more.',
 }
 
 const emergencyCategories = [
   {
-    title: 'Water Problems',
+    title: 'Water and Flood Damage',
     items: [
+      { label: 'Water damage restoration', href: '/water-damage-calgary' },
       { label: 'Basement flooding', href: '/basement-flooding-calgary' },
       { label: 'Burst pipes', href: '/burst-pipe-calgary' },
       { label: 'Sewer backup', href: '/sewer-backup-calgary' },
+    ],
+  },
+  {
+    title: 'Fire and Mold',
+    items: [
+      { label: 'Fire and smoke damage', href: '/fire-damage-calgary' },
+      { label: 'Mold removal', href: '/mold-removal-calgary' },
     ],
   },
   {
