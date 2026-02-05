@@ -17,8 +17,8 @@ export default function RootLayout({
         <header className="border-b border-gray-100">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
             <span className="font-medium text-slate-800 text-sm sm:text-base tracking-tight">Calgary Emergency Help</span>
-            <a href="tel:+15878483643" className="sm:hidden text-sm font-semibold text-emerald-700">
-              (587) 848-3643
+            <a href="tel:+14035366897" className="sm:hidden text-sm font-semibold text-emerald-700">
+              (403) 536-6897
             </a>
             <span className="text-xs text-gray-500 hidden sm:block">Local Calgary Service</span>
           </div>

@@ -1,6 +1,6 @@
 export default function PhoneButton({ className = '' }: { className?: string }) {
-  const phoneNumber = '(587) 848-3643'
-  const phoneLink = 'tel:+15878483643'
+  const phoneNumber = '(403) 536-6897'
+  const phoneLink = 'tel:+14035366897'
   
   return (
     <a 
